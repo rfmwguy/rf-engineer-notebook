@@ -1,0 +1,62 @@
+
+site_name: RF Engineer Notebook
+site_url: https://example.com
+repo_url: https://github.com/your-username/your-repo
+
+theme:
+  name: material
+  features:
+    - navigation.instant
+    - navigation.expand
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+  palette:
+    - media: '(prefers-color-scheme: light)'
+      scheme: default
+      primary: indigo
+      accent: blue
+    - media: '(prefers-color-scheme: dark)'
+      scheme: slate
+      primary: indigo
+      accent: blue
+
+plugins:
+  - search
+  - mermaid2
+
+markdown_extensions:
+  - admonition
+  - footnotes
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
+
+extra_javascript:
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+nav:
+  - Home: index.md
+  - Transmission Lines:
+      - Microstrip: 'Transmission Lines/Microstrip.md'
+      - CPW: 'Transmission Lines/CPW.md'
+  - Matching & Filters:
+      - LC Equivalents: 'Matching & Filters/LC-Equivalents.md'
+  - Transition Designs:
+      - Microstrip to CPW: 'Transition Designs/Microstrip-to-CPW.md'
+  - Thin-Film & TF-to-PCB:
+      - DC Feed Designs: 'Thin-Film & TF-to-PCB/DC-Feed-Designs.md'
+  - Simulation Techniques:
+      - Using CILD in ADS: 'Simulation Techniques/Using-CILD-in-ADS.md'
+      - ADS Workflow: 'Simulation Techniques/ADS-Workflow.md'
+  - Test & Measurement:
+      - VNA Calibrations: 'Test & Measurement/VNA-Calibrations.md'
